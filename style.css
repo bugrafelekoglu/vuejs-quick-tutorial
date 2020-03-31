@@ -1,0 +1,52 @@
+body {
+    background-color: #1e1e1e;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #bbb;
+}:-webkit-any-link {
+    color: #555;
+}
+
+#vue-app {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1, h2 {
+    color: white;
+    cursor: pointer;
+}
+
+#input1 {
+    display: block;
+    margin-top: 20px;
+}
+
+#canvas {
+    width: 600px;
+    margin: 20px 0px;
+    padding: 200px 20px;
+    text-align: center;
+    font-size: 4em;
+    border: 1px solid #333;
+}
+
+.wrapped {
+    display: none;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    margin-block-start: 10px;
+    margin-block-end: 10px;
+    background-color: gray;
+}
+
+.active {
+    background-color: green;
+}
+
+.passive {
+    background-color: red;
+}
