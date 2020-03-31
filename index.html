@@ -9,9 +9,9 @@
     </head>
     <body>
         <div id="vue-app">
-            <h1 @click="toggleAll">Vue Fundamentals</h1>
+            <h1 v-on:click="toggleAll">Vue Fundamentals</h1>
 
-            <h2 @click="toggle('#part1')">Curly Brackets</h2>
+            <h2 v-on:click="toggle('#part1')">Curly Brackets</h2>
             <div style="display: none" id="part1" class="parts">
                 <p>Name: {{name}}</p>
                 <p>Age: {{age}}</p>
@@ -19,14 +19,14 @@
                 <p>{{greet('günaydın')}}</p>
             </div>
         
-            <h2 @click="toggle('#part2')">Binding</h2>
+            <h2 v-on:click="toggle('#part2')">Binding</h2>
             <div style="display: none" id="part2" class="parts">
                 <a v-bind:href="website" target="_blank">Google</a>
                 <input id="input1" type="text" v-bind:value='name'>
                 <p v-html="websiteTag"></p>
             </div>
 
-            <h2 @click="toggle('#part3')">Events</h2>
+            <h2 v-on:click="toggle('#part3')">Events</h2>
             <div style="display: none" id="part3" class="parts">
                 <p>My age is: {{age}}</p>
                 <button v-on:click.once="older">Only One Time - Happy Birthday!</button>
@@ -42,7 +42,7 @@
                 </div>                
             </div>
 
-            <h2 @click="toggle('#part4')">Keyboard Events</h2>
+            <h2 v-on:click="toggle('#part4')">Keyboard Events</h2>
             <div style="display: none" id="part4" class="parts">
                 <label for="name">Name:</label>
                 <input id="name" type="text" v-on:keyup.enter="logName">
@@ -53,7 +53,7 @@
 
             </div>
 
-            <h2 @click="toggle('#part5')">Two-Way Data Binding</h2>
+            <h2 v-on:click="toggle('#part5')">Two-Way Data Binding</h2>
             <div style="display: none" id="part5" class="parts">
                 <label for="game">Game:</label>
                 <input id="game" type="text" v-model="game">
@@ -65,7 +65,7 @@
                 <span>{{gameHours}}</span>
             </div>
 
-            <h2 @click="toggle('#part6')">Computed Properties</h2>
+            <h2 v-on:click="toggle('#part6')">Computed Properties</h2>
             <div style="display: none" id="part6" class="parts">
                 <button v-on:click="a++">Add to A</button>    
                 <button v-on:click="b++">Add to B</button>   
@@ -86,14 +86,14 @@
                 -->
             </div>
 
-            <h2 @click="toggle('#part7')">Dynamic CSS</h2>
+            <h2 v-on:click="toggle('#part7')">Dynamic CSS</h2>
             <div style="display: none" id="part7" class="parts">
                 <button v-on:click="activate">Activate</button>
                 <button v-on:click="deactivate">Deactivate</button>
                 <div v-bind:class="compClasses"></div>
             </div>
 
-            <h2 @click="toggle('#part8')">Conditionals (v-if & v-show)</h2>
+            <h2 v-on:click="toggle('#part8')">Conditionals (v-if & v-show)</h2>
             <div id="part8" class="parts">
                 <button v-on:click="error = !error">Toggle Error</button>
                 <button v-on:click="success = !success">Toggle Success</button>

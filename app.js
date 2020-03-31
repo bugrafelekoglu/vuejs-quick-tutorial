@@ -1,4 +1,4 @@
-new Vue({
+let vm = new Vue({
     el: '#vue-app',
     data: {
         name: 'Bugra',
