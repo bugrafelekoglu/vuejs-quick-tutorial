@@ -50,3 +50,12 @@ h1, h2 {
 .passive {
     background-color: red;
 }
+
+table, td, th {
+    border: 1px solid;
+    padding: 5px;
+}
+
+th {
+    background: #333;
+}

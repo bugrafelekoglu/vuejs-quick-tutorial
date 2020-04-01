@@ -16,6 +16,15 @@ let vm = new Vue({
         passive: false,
         error: false,
         success: false,
+        characters: ['Mario', 'Luigi', 'Yoshi', 'Bowser'],
+        ninjas: [
+            {name: 'Ryu', age: 28},
+            {name: 'Genji', age: 32},
+            {name: 'Kyu', age: 45},
+            {name: 'Lin', age: 21},
+            {name: 'Mao', age: 64},
+            {name: 'Yoko', age: 17},
+        ],
     },
     methods: {
         toggleAll: function(params) {

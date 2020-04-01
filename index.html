@@ -11,6 +11,7 @@
         <div id="vue-app">
             <h1 v-on:click="toggleAll">Vue Fundamentals</h1>
 
+            <!-- #part1 -->
             <h2 v-on:click="toggle('#part1')">Curly Brackets</h2>
             <div style="display: none" id="part1" class="parts">
                 <p>Name: {{name}}</p>
@@ -19,6 +20,7 @@
                 <p>{{greet('günaydın')}}</p>
             </div>
         
+            <!-- #part2 -->
             <h2 v-on:click="toggle('#part2')">Binding</h2>
             <div style="display: none" id="part2" class="parts">
                 <a v-bind:href="website" target="_blank">Google</a>
@@ -26,6 +28,7 @@
                 <p v-html="websiteTag"></p>
             </div>
 
+            <!-- #part3 -->
             <h2 v-on:click="toggle('#part3')">Events</h2>
             <div style="display: none" id="part3" class="parts">
                 <p>My age is: {{age}}</p>
@@ -42,6 +45,7 @@
                 </div>                
             </div>
 
+            <!-- #part4 -->
             <h2 v-on:click="toggle('#part4')">Keyboard Events</h2>
             <div style="display: none" id="part4" class="parts">
                 <label for="name">Name:</label>
@@ -53,6 +57,7 @@
 
             </div>
 
+            <!-- #part5 -->
             <h2 v-on:click="toggle('#part5')">Two-Way Data Binding</h2>
             <div style="display: none" id="part5" class="parts">
                 <label for="game">Game:</label>
@@ -65,6 +70,7 @@
                 <span>{{gameHours}}</span>
             </div>
 
+            <!-- #part6 -->
             <h2 v-on:click="toggle('#part6')">Computed Properties</h2>
             <div style="display: none" id="part6" class="parts">
                 <button v-on:click="a++">Add to A</button>    
@@ -86,6 +92,7 @@
                 -->
             </div>
 
+            <!-- #part7 -->
             <h2 v-on:click="toggle('#part7')">Dynamic CSS</h2>
             <div style="display: none" id="part7" class="parts">
                 <button v-on:click="activate">Activate</button>
@@ -93,8 +100,9 @@
                 <div v-bind:class="compClasses"></div>
             </div>
 
+            <!-- #part8 -->
             <h2 v-on:click="toggle('#part8')">Conditionals (v-if & v-show)</h2>
-            <div id="part8" class="parts">
+            <div style="display: none" id="part8" class="parts">
                 <button v-on:click="error = !error">Toggle Error</button>
                 <button v-on:click="success = !success">Toggle Success</button>
                 <p v-if="error">There has been an error!</p>
@@ -104,10 +112,65 @@
                      -->
                 <p v-show="error">There has been an error!</p>
                 <p v-show="success">Successfully completed!</p>
+            </div>
 
+            <!-- #part9 -->
+            <h2 v-on:click="toggle('#part9')">Looping (v-for)</h2>
+            <div style="display: none" id="part9" class="parts">
+                <p>Characters with only name</p>
+                <ul>
+                    <li v-for="character in characters">{{character}}</li>
+                </ul>
+                <p>Ninjas with names and ages</p>
+                <table>
+                    <tr>
+                        <th>Index</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                    </tr>
+                    <tr v-for="(ninja, index) in ninjas">
+                        <td>{{index + 1}}</td>
+                        <td>{{ninja.name}}</td>
+                        <td>{{ninja.age}}</td>
+                    </tr>
+                </table>
+                <br>
+                <table>
+                    <tr>
+                        <th>
+                            <p>v-for with divs <br> (there are many divs)</p>
+                        </th>
+                        <th>
+                            <p>if we don't want to see divs <br> then use template as container</p>
+                        </th>
+                        <th>
+                            <p>This time we loop <br> both array and objects</p>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div v-for="(ninja, index) in ninjas">
+                                <h4>{{index + 1}} . {{ninja.name}}</h4>
+                                <p>{{ninja.age}}</p>
+                            </div>
+                        </td>
+                        <td>
+                            <template v-for="(ninja, index) in ninjas">
+                                <h4>{{index + 1}} . {{ninja.name}}</h4>
+                                <p>{{ninja.age}}</p>
+                            </template>                            
+                        </td>
+                        <td>
+                            <template v-for="ninja in ninjas">
+                                <div v-for="(val, key) in ninja">
+                                    <p>{{key}} - {{val}}</p>
+                                </div>                                           
+                            </template>
+                        </td>
+                    </tr>
+                </table>
             </div>
         </div>
-
         <script src="app.js"></script>
     </body>
 </html>
